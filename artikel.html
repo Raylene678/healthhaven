@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(51, 145, 83);
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        header {
+            padding: 20px;
+            border-bottom: 1px solid rgb(51, 145, 83);
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(51, 145, 83);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            color: rgb(51, 145, 83);
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: rgb(51, 145, 83);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(76, 189, 114);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(230, 255, 240);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .artikel-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .artikel-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 1px solid  rgb(51, 145, 83);
+            padding-bottom: 20px;
+        }
+
+        .artikel-card img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .artikel-preview {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .form-container label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid rgb(76, 189, 114);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            resize: vertical;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: rgb(76, 189, 114);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: rgb(56, 139, 84);
+        }
+
+        .baca-lengkap{
+            display: inline-block;
+       padding: 8px 15px;
+       font-size: 12px;
+       font-weight: bold;
+       color: rgb(0, 0, 0);
+       background-color: rgb(212, 255, 226);
+       border: none;
+       border-radius: 8px;
+       text-decoration: none;
+       box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        .baca-lengkap:hover{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="tentangkami.html">Tentang Kami</a> |
+            <a href="artikel.html">Artikel</a> |
+            <a href="carabelanja.html">Cara Belanja</a> |
+            <div class="dropdown">
+                <a href="katalog.html">Katalog</a> |
+                <div class="dropdown-content">
+                    <a href="katalog.html">Tampilkan semua</a>
+                    <a href="katalog2.html">Blood Pressure Monitor</a>
+                    <a href="katalog3.html">Kursi Roda</a>
+                </div>
+            </div>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="artikel-list">
+            <div class="artikel-card">
+                <img src="kursi roda.jpg" alt="Gambar Artikel 1" width="200px" height="200px">
+                <div>
+                    <h2>Cara Memilih Kursi Roda yang Sesuai</h2>
+                    <p class="artikel-preview">Bingung pilih kursi roda yang pas? Yuk ikuti tips berikut untuk memilih kursi roda yang pas.</p>
+                    <button class="baca-lengkap" onclick="bukaArtikel1('artikel-1')">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="artikel-card">
+                <img src="/Users/raylenealamsjah/Documents/HTML/project it/alat kesehatan yang sering digunakan dalam rumah sakit.avif" alt="Gambar Artikel 2" width="200px" height="200px">
+                <div>
+                    <h2>Alat Kesehatan yang Sering Digunakan Di Rumah Sakit</h2>
+                    <p class="artikel-preview">Alat kesehatan merupakan bagian integral dalam mendukung perawatan kesehatan manusia. Mereka memainkan peran yang sangat penting dalam mendiagnosis, mengobati, dan mendukung proses penyembuhan.</p>
+                    <button class="baca-lengkap" onclick="bukaArtikel2('artikel-2')">Baca Selengkapnya</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script>
+        function bukaArtikel1(artikelId) {
+            window.location.href = "artikel1.html"; 
+        }
+
+        function bukaArtikel2(artikelId) { 
+            window.location.href = "artikel2.html"; 
+        }
+    </script>
+</body>
+</html>

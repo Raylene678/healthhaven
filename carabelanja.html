@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Belanja</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(51, 145, 83);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        header {
+            padding: 20px;
+            border-bottom: 1px solid rgb(51, 145, 83);
+        }
+
+        nav a {
+            color: rgb(51, 145, 83);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            color: rgb(51, 145, 83);
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: rgb(51, 145, 83);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(76, 189, 114);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(230, 255, 240);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .link-belanja {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .link-belanja button {
+            background-color: rgb(76, 189, 114);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .link-belanja button:hover {
+            background-color: rgb(56, 139, 84);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .form-container label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid rgb(76, 189, 114);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            resize: vertical;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: rgb(76, 189, 114);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: rgb(56, 139, 84);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="tentangkami.html">Tentang Kami</a> |
+            <a href="artikel.html">Artikel</a> |
+            <a href="carabelanja.html">Cara Belanja</a> |
+            <div class="dropdown">
+                <a href="katalog.html">Katalog</a> |
+                <div class="dropdown-content">
+                    <a href="katalog.html">Tampilkan semua</a>
+                    <a href="katalog2.html">Blood Pressure Monitor</a>
+                    <a href="katalog3.html">Kursi Roda</a>
+                </div>
+            </div>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cara Belanja</h1>
+        <p>
+            Untuk ketersediaan stok, silakan telepon / WhatsApp ke nomor 0812 1786 9324, jika ingin belanja dari kami silahkan klik link tersebut ke Tokopedia, Shopee, Bukalapak atau Halodoc. Lalu, pengguna bisa memilih alat kesehatan atau produk yang mereka ingin membelikan.
+        </p>
+
+        <h1>Link Belanja</h1>
+
+        <div class="link-belanja">
+            <button onclick="window.location.href='https://www.tokopedia.com'">Tokopedia</button>
+            <button onclick="window.location.href='https://www.shopee.co.id'">Shopee</button>
+            <button onclick="window.location.href='https://www.bukalapak.com'">Bukalapak</button>
+            <button onclick="window.location.href='https://www.halodoc.com'">Halodoc</button>
+        </div>
+
+        <div class="form-container">
+            <label for="komentar">Komentar</label>
+            <textarea id="komentar" name="komentar" rows="4" placeholder="Isi komentar Anda"></textarea>
+
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda">
+
+            <input type="submit" value="Kirim" onclick="tampilkanHasil()">
+        </div>
+
+        <div id="hasil">
+
+        </div>
+    </main>
+<script>
+    function tampilkanHasil() {
+             nama = document.getElementById("nama").value;
+             
+             alert('Terima Kasih ' + nama + ' atas sarannya!');
+        }
+        
+        </script>
+</script>
+
+</body>
+</html>
